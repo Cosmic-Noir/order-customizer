@@ -6,7 +6,11 @@ class Form extends Component {
     return (
       <form className="main__form">
         <h2>Customize your laptop</h2>
-        <Features features={this.props.features} />
+        <Features
+          features={this.props.features}
+          selected={this.props.selected}
+          onChange={this.props.onChange}
+        />
       </form>
     );
   }

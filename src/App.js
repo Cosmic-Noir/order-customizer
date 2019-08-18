@@ -49,8 +49,13 @@ class App extends Component {
           <h1>ELF Computing | Laptops</h1>
         </header>
         <main>
-          <Form features={this.props.features} />
-          <Cart selected={this.state.selected} />
+          <Form features={this.props.features} selected={this.state.selected} />
+          <Cart
+            selected={this.state.selected}
+            onChange={(feature, newValue) =>
+              this.updateFeature(feature, newValue)
+            }
+          />
         </main>
       </div>
     );
