@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 
+const USCurrencyFormat = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD"
+});
+
 class Summary extends Component {
   render() {
     const summary = Object.keys(this.state.selected).map((feature, idx) => {
@@ -16,6 +21,7 @@ class Summary extends Component {
         </div>
       );
     });
+    return summary;
   }
 }
 
